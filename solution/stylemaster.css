@@ -8,5 +8,105 @@
     --lightbluebg:rgb(236, 249, 255);
     --darkbluebg:rgb(17,81,111);
     --lightbrownbg:rgb(250,250,250);
-    --fontfam:'Roboto', sans-serif;;        
+    --brownbg:rgb(243,242,242);
+    --fontfam:'Roboto', sans-serif;
+    --font-small:0.8rem;        
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+  
+
+@media screen and (min-width:800px){
+    .wrapper{
+        width:100%;
+        border:1px solid black;
+    }
+    .document{
+        width:75%;
+        margin:auto;
+    }
+    .cart-div{
+        border:1px solid black;
+    }
+    .cart-label{
+        float:right;
+        font-family:var(--fontfam);
+        color:var(--bluetext);
+        font-weight:bold;
+        padding:0.15rem;
+        margin-left:0.3rem;
+        font-size:var(--font-small);
+    }
+    .highlight{
+        background-color:var(--brownbg);
+        font-weight:550;
+    }
+    .cart-div::after{
+        content:'';
+        clear:both;
+        display:table;
+    }
+    .cart-div-item{
+        text-align:center;
+        padding:0 1.2rem;
+    }
+    .first::after{
+        content:'';
+        display:inline-block;
+        height:0.7rem;
+        width:0.12rem;
+        position:relative;
+        left:1.5rem;
+        top:0.1rem;
+        background-color:var(--bluetext);
+    }
+    
+    .company-review{
+        padding:0 1rem;
+        font-size:1.5rem;
+        font-family:var(--fontfam);
+        color:var(--bluetext);
+        font-weight:bold;
+        letter-spacing:0.1rem;
+    }
+
+    .logo-div{
+        border:1px solid black;
+        overflow: hidden;
+        padding:1rem 2rem;
+    }
+    .logo-div-item{
+        float:left;
+    }
+    .company-contact{
+        float:right;
+        display:grid;
+        grid-template-columns:repeat(2,150px);
+    }
+    .contact-item{
+        position: relative;
+    }
+    .contact-text{
+        font-size:var(--font-small);
+        font-family:var(--fontfam);
+        color:var(--blacktext);
+        font-weight:bold;
+        top:0.8rem;
+        text-align:right;
+    }
+    .contact-image{
+        justify-self:center;
+        top:1.6rem;
+        left:5.3rem;
+    }
+    .phone-no{
+        grid-column:2/3;
+        color:rgb(38,159,215);
+        bottom:1.2rem;
+        letter-spacing:0.15rem;
+        text-align:right;
+    }
 }
