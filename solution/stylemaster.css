@@ -16,15 +16,19 @@
 body{
     padding:0;
     margin:0;
+    background-image:url(images/bkg.png);
+    font-family:var(--fontfam);
 }
   
 
 @media screen and (min-width:800px){
-    .wrapper{
+    /* top-section */
+    .top-section{
         width:100%;
         border:1px solid black;
+        background-color:white;
     }
-    .document{
+    #logo{
         width:75%;
         margin:auto;
     }
@@ -33,7 +37,6 @@ body{
     }
     .cart-label{
         float:right;
-        font-family:var(--fontfam);
         color:var(--bluetext);
         font-weight:bold;
         padding:0.15rem;
@@ -65,48 +68,165 @@ body{
     }
     
     .company-review{
-        padding:0 1rem;
         font-size:1.5rem;
-        font-family:var(--fontfam);
         color:var(--bluetext);
         font-weight:bold;
         letter-spacing:0.1rem;
+        display:flex;
+        align-items:center;
+        width:120px;
     }
 
     .logo-div{
         border:1px solid black;
-        overflow: hidden;
-        padding:1rem 2rem;
+        display:flex;
+        padding:0rem 2rem;
+        padding-top:0.5rem;
     }
     .logo-div-item{
-        float:left;
+        border:1px solid black;
+        flex-grow:1;
+    }
+    .logo-img{
+        width:140px;
+        display:flex;
+        justify-content:start;
+        align-items:center;
+    }
+    .logo-img img{
+        width:90%;
+    }
+    .company-contact-wrapper{
+        align-self:center;
     }
     .company-contact{
-        float:right;
         display:grid;
-        grid-template-columns:repeat(2,150px);
+        grid-template-columns:50px 120px;
+        margin-right:0;
     }
     .contact-item{
-        position: relative;
+        border:1px solid black;
+        margin:0;
     }
     .contact-text{
         font-size:var(--font-small);
-        font-family:var(--fontfam);
         color:var(--blacktext);
         font-weight:bold;
-        top:0.8rem;
-        text-align:right;
+        display:flex;
+        align-items:flex-end;
+        justify-content:flex-end;
     }
     .contact-image{
-        justify-self:center;
-        top:1.6rem;
-        left:5.3rem;
+        justify-self:end;
+        align-self:end;
+        grid-row:1/3;
+        position: relative;
+        bottom:0.2rem;
     }
     .phone-no{
-        grid-column:2/3;
         color:rgb(38,159,215);
-        bottom:1.2rem;
-        letter-spacing:0.15rem;
+        font-size:1rem;
+        font-weight:bolder;
+        letter-spacing:0.04rem;
+        grid-column:2/3;
         text-align:right;
     }
+    /* top-section */
+
+    /* banner-section */
+    .banner-section{
+        width:100%;
+        border:1px solid black;
+    }
+    #banner{
+        width:75%;
+        margin:auto;
+        border:1px solid black;
+        display:grid;
+        grid-template-rows:50px 190px 350px;
+    }
+    /* breadcrumbs */
+    .option-list{
+        padding:1rem 1.5rem;
+        margin:0;
+        list-style-type:none;
+        overflow: hidden;
+        background-color:var(--darkbluebg);
+    }
+    .option-list-item{
+        float:left;
+        color:white;
+        margin-left:1rem;
+        font-weight:bold;
+        font-size:var(--font-small);
+    }
+    .crumb-img{
+        margin-left:0.5rem;
+    }
+    /* breadcrumbs */
+
+    /*companytitle*/
+    .company-work{
+        position:relative;
+    }
+    .tabletsimage{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100%;
+    }
+    .tabletsimage img{
+        width:100%;
+        height:100%;
+    }
+    .companytitlewrapper{
+        position:absolute;
+        bottom:20%;
+    }
+    .companytitle{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:9.3rem;
+    }
+    .containstitle{
+        padding:1.8rem;
+    }
+    .pharmaimage{
+        margin-left:2rem;
+    }
+    .searchbox{
+        display:flex;
+        flex-direction:column;
+        padding:1.8rem;
+    }
+    .mainsearch{
+        display:flex;
+    }
+    .mainsearch input{
+        padding:0.8rem;
+        width:80%;
+        border:1px solid var(--blacktext);
+        color:var(--blacktext);
+        border-radius:0.3rem;
+        margin-right:0.5rem;
+    }
+    .searchbox p{
+        color:white;
+        font-size:1rem;
+        font-weight:bolder;
+    }
+    .slider{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .slider img{
+        flex-shrink:0;
+        width:100%;
+        height:100%;
+    }
+    /*companytitle*/
+
+    /* banner-section */
 }
