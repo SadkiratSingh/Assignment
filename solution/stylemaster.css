@@ -1,0 +1,12 @@
+*,*::after,*::before{
+    box-sizing:border-box;
+}
+:root{
+    --bluetext:rgb(20, 134, 186);
+    --blacktext:rgb(51, 51, 51);
+    --lighttext:lightgray;
+    --lightbluebg:rgb(236, 249, 255);
+    --darkbluebg:rgb(17,81,111);
+    --lightbrownbg:rgb(250,250,250);
+    --fontfam:'Roboto', sans-serif;;        
+}
