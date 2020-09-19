@@ -668,4 +668,45 @@ body{
         max-width:50%;
     }
     /* arranging play icons */
+
+    /* video popups */
+
+    .popup-wrapper{
+        position:fixed;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        background-color:black;
+        opacity:0.9;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        z-index:1000;
+    }
+
+    .popup-video{
+        background-color:white;
+        border-radius:1.5rem;
+    }
+
+    .video-title-bar{
+        border:1px solid black;
+        text-align:center;
+    }
+    .video-title-bar span{
+        text-align:right;
+    }
+    .toggle-videos{
+        border:1px solid black;
+        text-align:center;
+    }
+    .toggle-videos>img:first-child{
+        margin-right:2%;
+        cursor: pointer;
+    }
+    .toggle-videos>img:last-child{
+        margin-left:2%;
+        cursor: pointer;
+    }
 }
