@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='stylemaster.css' rel='stylesheet' type='text/css'/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link href='stylemaster.css' rel='stylesheet' type='text/css'/>
     <title>Assignment</title>
 </head>
 <body>
@@ -60,21 +61,19 @@
 
             <!--COMPANY WORK-->
             <div class='company-work'>
-                <div class='tabletsimage'>
-                    <img src='images/search_bk.png'>
-                </div>
-                <div class='companytitlewrapper'>
-                    <div class='companytitle'>
-                        <div class='containstitle'>
-                            <img class='pharmaimage' src='images/logo1.png' alt='pharma'>
+                <div class='company-title-wrapper'>
+                    <div class='tabimg'>
+                        <img class='tabletsimage' src='images/search_bk.png'>
+                    </div>
+                    <div class='containstitle'>
+                        <img class='pharmaimage' src='images/logo1.png' alt='pharma'>
+                    </div>
+                    <div class='searchbox'>
+                        <div class='mainsearch'>
+                            <input type='text' value='Lorem Ipsum Company'>
+                            <img src='images/search.png' alt='search'>
                         </div>
-                        <div class='searchbox'>
-                            <div class='mainsearch'>
-                                <input type='text' value='Lorem Ipsum Company'>
-                                <img src='images/search.png' alt='search'>
-                            </div>
-                            <p>Search for in-depth information on 8,562 products and services across formulation and manufacturing.</p>
-                        </div>
+                        <p>Search for in-depth information on 8,562 products and services across formulation and manufacturing.</p>
                     </div>
                 </div>
             </div>
@@ -84,10 +83,17 @@
                 <div class="slider-wrapper">
                     <div class='slider'>
                         <img src='images/cycle_img1.png' alt='cycle_img1'>
+                        <img src='images/cycle_img2.png' alt='cycle_img2'>
                     </div>
                     <div class=slider-img-desc>
-                        <h4 id='slider-h4'>Glass Breakers and Containers</h4>
-                        <p id='slider-p2'>Adephi Coldstream</p>
+                        <div class='description'>
+                            <h4 id='slider-h4'>Glass Breakers and Containers</h4>
+                            <p id='slider-p2'>Adephi Coldstream</p>
+                        </div>
+                        <div class='slide-nav'>
+                            <span class='circle'></span>
+                            <span class='circle'></span>
+                        </div>
                     </div>
                 </div>
             <!--SLIDER-->
@@ -415,11 +421,12 @@
                                 <div class='content-item-special-image'>
                                     <div class='image-holder'>
                                         <img src='images/video_img.png'>
-                                        <img src='images/play_arrow_big (2).png'>
+                                        <img src='images/play_arrow_big (2).png' id='0'>
                                     </div>
                                 </div>
                                 <div class='content-item-special-heading'>
                                     <h4>Featured:Title of Video</h4>
+                                    <span class='video-link' style='display:none;'>https://www.youtube.com/embed/8b0ubLO2MUE?version=3&enablejsapi=1</span>
                                 </div>
                                 <div class='content-item-special-description'>
                                     <p>Video Decription Donec vulputate,magna eleifend porttitor, vehiculat ac scelerisque tortor neque bibendum cursus vehicula quam a arcu vestibulum molestiedolor ac scel erisque tortor neque bibendum magna dolor.</p>
@@ -430,11 +437,12 @@
                                 <div class='content-item-image'>
                                     <div class='image-holder'>
                                         <img src='images/video_placeholder.png'>
-                                        <img src='images/play_arrow_small.png'>
+                                        <img src='images/play_arrow_small.png' id='1'>
                                     </div>
                                 </div>
                                 <div class='content-item-heading'>
                                     <h4>Title</h4>
+                                    <span class='video-link' style='display:none;'>https://www.youtube.com/embed/1Eyz5JSUBy8?version=3&enablejsapi=1</span>
                                 </div>
                                 <div class='content-item-description'>
                                     <p>Donec vulputate,magna eleifend porttitor, vehiculat ac...<span>watch</span><img src='images/more_arrow.png'></p>
@@ -445,11 +453,12 @@
                                 <div class='content-item-image'>
                                     <div class='image-holder'>
                                         <img src='images/video_placeholder.png'>
-                                        <img src='images/play_arrow_small.png'>
+                                        <img src='images/play_arrow_small.png' id='2'>
                                     </div>
                                 </div>
                                 <div class='content-item-heading'>
                                     <h4>Title</h4>
+                                    <span class='video-link' style='display:none;'>https://www.youtube.com/embed/yHm7hx0nuRs?version=3&enablejsapi=1</span>
                                 </div>
                                 <div class='content-item-description'>
                                     <p>Donec vulputate,magna eleifend porttitor, vehiculat ac...<span>watch</span><img src='images/more_arrow.png'></p>
@@ -460,11 +469,12 @@
                                 <div class='content-item-image'>
                                     <div class='image-holder'>
                                         <img src='images/video_placeholder.png'>
-                                        <img src='images/play_arrow_small.png'>
+                                        <img src='images/play_arrow_small.png' id='3'>
                                     </div>
                                 </div>
                                 <div class='content-item-heading'>
                                     <h4>Title</h4>
+                                    <span class='video-link' style='display:none;'>https://www.youtube.com/embed/4Sawv5LQwjA?version=3&enablejsapi=1</span>
                                 </div>
                                 <div class='content-item-description'>
                                     <p>Donec vulputate,magna eleifend porttitor, vehiculat ac...<span>watch</span><img src='images/more_arrow.png'></p>
@@ -498,7 +508,7 @@
                     <li class='credits-list-item'>Free Company Data</li>
                     <li class='credits-list-item'>Establish Business Credit</li>
                     <li class='credits-list-item'>D&B Credibility Review</li>
-                    <li class='credits-list-item'>Search for D&B D-U-N-S</li>
+                    <li class='credits-list-item'>Search for D&B D-U-N-S<span>&#174;</span></li>
                 </ul>
             </div>
             <div class='credits-item Our Network'>
@@ -540,20 +550,20 @@
                 <div class='mcaf'><img src='images/mcafee.png'></div>
                 <div class='buss'><img src='images/buss.png'></div>
                 <div class='norton'><img src='images/norton.png'></div>
-                <div class='ending'><p>Dun & Bradstreet Credibility Corp.,2010-12</p></div>
+                <div class='ending'><p><span>&#169;</span>Dun & Bradstreet Credibility Corp.,2010-12</p></div>
             </div>
         </div>
     </div>
     <!--FOOTER-->
     <!--popups-->
     <div class='popup-wrapper'>
-        <div class='popup-video' id='my-modal'>
+        <div class='popup-video'>
             <div class='video-title-bar'>
-                <h3>This is a video</h3>
-                <span>Close Button</span>
+                <h3>Video Player</h3>
+                <img src='images/cross.png' class='cross'>
             </div>
             <div class='video-section'>
-                <h2>Video is playing here</h2>
+                <iframe class='play-video' width="100%" height="500vh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class='toggle-videos'>
                 <img src='images/prev-1.png'>
@@ -564,7 +574,18 @@
     <!--popups-->
 
     <!--scripts-->
-    <script src='js/modal.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script>
+        var slider=tns({
+            container:'.slider',
+            autoplay:true,
+            navContainer:'.slide-nav',
+            controls:false,
+            autoplayButtonOutput:false,
+            autoHeight:true,
+        });
+        slider.updateSliderHeight(200);
+    </script>
     <script src='js/masterscript.js'></script>
     <!--scripts-->
 </body>

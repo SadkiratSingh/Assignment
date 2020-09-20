@@ -10,10 +10,10 @@
     --lightbrownbg:rgb(250,250,250);
     --brownbg:rgb(243,242,242);
     --fontfam:'Roboto', sans-serif;
-    --font-small:0.8rem;
+    --font-small:0.8vw;
     --font-size1:1vw;
     --font-size2:1.5vw;  
-    --font-size3:1.2vw;       
+    --font-size3:1.2vw;     
 }
 
 body{
@@ -23,690 +23,718 @@ body{
     font-family:var(--fontfam);
 }
   
-
-@media screen and (min-width:800px){
-    /* top-section */
-    .top-section{
-        width:100%;
-        border:1px solid black;
-        background-color:white;
-    }
-    #logo{
-        width:75%;
-        margin:auto;
-    }
-
-   /* FIRST PART OF LOGO */
-    .cart-label{
-        float:right;
-        color:var(--bluetext);
-        font-weight:bold;
-        padding:0.15rem;
-        margin-left:0.3rem;
-        font-size:var(--font-small);
-    }
-    .highlight{
-        background-color:var(--brownbg);
-        font-weight:550;
-    }
-    /* to overcome overflow condition */
-    .cart-div::after{
-        content:'';
-        clear:both;
-        display:table;
-    }
-    .cart-div-item{
-        text-align:center;
-        padding:0 1.2rem;
-    }
-    .first::after{
-        content:'';
-        display:inline-block;
-        height:0.7rem;
-        width:0.12rem;
-        position:relative;
-        left:1.5rem;
-        top:0.1rem;
-        background-color:var(--bluetext);
-    }
-     /* FIRST PART OF LOGO */
-
-     /* SECOND PART OF LOGO */
-     .logo-div{
-        display:flex;             /* used flex because float property was breaking the layout somehow*/
-        padding:0 2rem 0 2rem;
-        align-items:center;
-    }
-    .logo-div-item{
-        padding:0.7rem 0;
-    }
-    
-    /* LOGO DIV ITEM 1 */
-    .company-review{
-        font-size:1.5rem;
-        color:var(--bluetext);
-        font-weight:bold;
-        letter-spacing:0.1rem;
-        display:flex; /* to center the contents vertically */
-        align-items:center;
-        flex-grow:0.5;
-    }
-    /* LOGO DIV ITEM 1 */
-
-    /* LOGO DIV ITEM 2 */
-    .logo-img{
-        flex-grow:0.4;
-        display:flex; /* to center the contents vertically*/
-        justify-content:start;
-        align-items:center;
-    }
-    .logo-img img{
-        width:95%;
-    }
-    /* LOGO DIV ITEM 2 */
-    
-    /* LOGO DIV ITEM 3 */
-    .company-contact-wrapper{ /* used a wrapper around grid so that grid layout does not break*/
-        flex-grow:2;
-        display:flex;
-        justify-content:flex-end;
-    }
-
-    /* grid work */
-    .company-contact{
-        display:grid;
-        grid-template-columns:50px 120px;
-    }
-    .contact-item{
-        margin:0;
-    }
-    .contact-text{
-        font-size:var(--font-small);
-        color:var(--blacktext);
-        font-weight:bold;
-        display:flex;
-        align-items:flex-end;
-        justify-content:center;
-    }
-    .contact-image{
-        justify-self:end;
-        align-self:end;
-        grid-row:1/3;
-        height:100%;
-    }
-    .phone-no{
-        color:rgb(38,159,215);
-        font-size:1rem;
-        font-weight:bolder;
-        letter-spacing:0.04rem;
-        grid-column:2/3;
-        text-align:center;
-    }
-    /* grid work */
-
-    /* LOGO DIV ITEM 3 */
-
-    /* top-section */
-
-    /* banner-section */
-    .banner-section{
-        width:100%;
-        border:1px solid black;
-    }
-    #banner{
-        width:75%;
-        margin:auto;
-        display:grid;  /* set up a grid of 3 rows to maintain the layout */
-        grid-template-rows:1.3fr 5.3fr 12.3fr; /*relative units do not break layout */
-    }
-    /* breadcrumbs  FIRST ROW*/
-    .option-list{
-        padding:1rem 1.5rem;
-        margin:0;
-        list-style-type:none;
-        overflow: hidden;
-        background-color:var(--darkbluebg);
-    }
-    .option-list-item{
-        float:left;
-        color:white;
-        margin-left:1rem;
-        font-weight:bold;
-        font-size:var(--font-small);
-    }
-    .crumb-img{
-        margin-left:0.5rem;
-    }
-    /* breadcrumbs */
-
-    /*companytitle SECOND ROW*/
-    .company-work{
-        position:relative; /* to gaurd the grid wrapper inside so that it does not break the layout */
-    }
-    .tabletsimage{
-        display:flex;
-        justify-content:center; /* centering items inside divs */
-        align-items:center;
-        height:100%;
-    }
-    .tabletsimage img{
-        width:100%;
-        height:100%;
-    }
-    .companytitlewrapper{
-        position:absolute; /* wrapper around grid */
-        bottom:10%;
-    }
-    .companytitle{
-        width:100%;
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        grid-template-rows:9.3rem;
-    }
-    .containstitle{
-        padding:1.8rem;
-    }
-    .pharmaimage{
-        margin-left:2rem;
-    }
-    .searchbox{
-        display:flex;
-        flex-direction:column; /* reversing flex direction */
-        padding:1.8rem;
-    }
-    .mainsearch{
-        display:flex;
-    }
-    .mainsearch input{
-        padding:0.8rem;
-        width:80%;
-        border:1px solid var(--blacktext);
-        color:var(--blacktext);
-        border-radius:0.3rem;
-        margin-right:0.5rem;
-    }
-    .searchbox p{
-        color:white;
-        font-size:1rem;
-        font-weight:bolder;
-    }
-    /*companytitle*/
-    .slider-wrapper{
-        position: relative;
-    }
-    .slider{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        height:100%;
-    }
-    .slider img{
-        width:100%;
-        height:100%;
-    }
-    .slider-img-desc{
-        background-color:rgb(51,76,36);
-        color:white;
-        position: absolute;
-        right:0;
-        left:0;
-        bottom:0;
-        opacity:0.9;
-    }
-    .slider-img-desc p,.slider-img-desc h4{
-        margin-left:1.5rem;
-        margin-bottom:0.05rem;
-    }
-    #slider-p2{
-        font-size:var(--font-small);
-    }
-    /* banner-section */
-
-    /* content-section */
-
-    /* to make my content section responsive I divided it into 2 parts section-1 and section-2
-       in the ratio 1:3. Section-1 contains categories and and ad. Section 2 contains profiles,
-       articles and more-content section which consists of whitepapers and videos */
-
-    .content-section{
-        width:100%;
-    }
-    #allcontent{
-        width:75%;
-        margin:auto;
-        padding:2%;
-        background-color:white;
-        position: relative;
-        height:140vw;
-    }
-    .maincontent1{
-        width:25%;
-        float:left;
-        padding-right:3%;
-    }
-    .maincontent2{
-        width:75%;
-        float:left;
-    }
-    #allcontent::after{
-        content:'';
-        display:table;
-        clear:both;
-    }
-
-    /* general description of every main content part */
-    .maincon-item{
-        background-color:var(--lightbrownbg);
-    }
-    .morecontent{
-        background-color:white;
-    }
-    /* general description of every main content part */
-
-    /* arrangement for main-content items */
-    .articles,.company-profiles,.leftad,.categories,.morecontent{
-        width:100%;
-    }
-    .articles,.company-profiles,.morecontent{
-        margin-bottom:3.5%;
-    }
-    
-    /* more-content is a grid */
-    .morecontent{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        grid-column-gap:2vw;
-    }
-    .company-profiles .content-container{
-        position:relative;
-    }
-    .whitepapers .content-item,.videos .content-item{
-        position: relative;
-    }
-    .whitepapers .content-heading,.videos .content-heading{
-        padding-left:7.5%;
-    }
-    .profile-add-item{
-        grid-row:2/4;
-        grid-column:1/2;
-        z-index:100;
-    }
-    .company-profiles .content-container .last-row{
-        grid-row:3/4;
-        grid-column:1/2;
-    }
-    .company-profiles .content-container .second-last-row{
-        grid-row:2/3;
-        grid-column:1/2;
-    }
-     /* arrangement for maincontent items */
-
-     /*main-content-1*/
-    .categories{
-        background-color:var(--lightbrownbg);
-        padding:7%;
-        padding-top:9%;
-        padding-bottom:70%;
-    }
-    .categories h4{
-        color:var(--bluetext);
-        margin-top:0;
-        position:relative;
-        font-size:1.4vw;
-    }
-    .category-list{
-        list-style-type:none;
-        padding:0;
-        margin:0;
-        background-color:var(--lightbrownbg);
-    }
-    .category-li{
-        font-weight:bolder;
-        line-height:4.5vh;
-        font-size:var(--font-size1);
-    }
-
-    .leftad{
-        display:flex;
-        justify-content:center;
-        align-items:flex-start;
-        padding:1.3rem;
-        background-color:white;
-    }
-    .leftad>img{
-        max-width:100%;
-    }
-    /*main-content-1*/
-    
-
-    /* all horizontal lines */
-    .content-heading::after,.content-row::after,.whitepapers .content-item::after,.videos .content-item::after,.categories h4::after,.content-item-special::after{
-        content:'';
-        display:block;
-        position:absolute;
-        height:0.01rem;
-        left:1.5vw;
-        right:4vw;
-        top:3.8vw;
-        background-color:var(--lighttext);
-        opacity:0.2;
-    }
-    .content-item-special::after,.videos .content-item::after{
-        top:100%;
-        right:13%;
-        left:0%;
-    }
-    .videos .content-item::after{
-        top:100%;
-        right:11%;
-        left:6%;
-    }
-    .whitepapers .content-item::after{
-        top:100%;
-    }
-    .content-container > .last-row::after{
-        display:none;
-    }
-    .categories h4::after{
-        right:0;
-        left:0;
-        top:145%
-    }
-    .content-row::after{
-        top:100%;
-    }
-    /* all horizontal lines */
-
-
-    /* above every content-container*/
-    .content-heading{
-        color:var(--bluetext);
-        font-weight:bolder;
-        overflow:hidden;
-        padding:0 3% 0 3%;
-        position: relative;
-    }
-    .content-heading p{
-        float:left;
-        font-size:1.4vw;
-    }
-    .content-heading span{
-        float:right;
-        font-size:1vw;
-        position:absolute;
-        right:5vw;
-        top:3vh;
-    }
-    .content-heading img{
-        position:absolute;
-        right:4vw;
-        top:3.6vh;
-    }
-    
-    /* above every content-container*/
-    
-    /* content-container*/
-    .content-container{
-        display:grid;
-        grid-template-columns:1fr;
-    }
-
-    /* content-container rows */
-    .content-row{
-        display:flex;
-        position: relative;
-    }
-    /* content-container rows */
-
-    /* grid of content items inside container*/
-    .content-item{
-        display:grid;
-        grid-template-columns:1fr 3fr;
-        flex-grow:1;
-    }
-    .content-item-image{
-        justify-self:center;
-        grid-row:1/3;
-        align-self:center;
-    }
-    .content-item-image img{
-        max-width:100%;
-    }
-    .content-item-heading h4{
-        margin-bottom:0.3vh;
-        font-size:var(--font-size3);
-        padding-left:3%;
-    }
-    .content-item-description{
-        grid-column:2/3;
-    }
-    .content-item-description p{
-        font-size:var(--font-size1);
-        margin-top:0.3vh;
-        font-weight:bold;
-        padding-left:3%;
-    }
-    .content-item-description p > span{
-        color:var(--bluetext);
-        font-size:bolder;
-        margin-right:0.3vh;
-    }
-    /* grid of content items inside container*/
-
-    /* content-container*/
-
-    .profile-add-item{
-        display:flex;
-        background-color:var(--lightbluebg);
-        justify-content:center;
-        align-items:center;
-        width:50%;
-        justify-self:end;
-    }
-
-    .article-heading{
-        display:inline-block;
-    }
-
-    .article-heading::after{
-        content:" ";
-        display:inline-block;
-        height:var(--font-size2);
-        width:0.1vw;
-        position: relative;
-        top:0.2rem;
-        background-color:var(--lighttext);
-    }
-    .article-heading + span{
-        color:var(--lighttext);
-        font-size:var(--font-size1);
-        font-weight:bold;
-    }
-    .video .content-item-image{
-        margin-left:3vh;
-    }
-    .video .content-item-description,.video .content-item-heading{
-        margin-left:0.9vw;
-    }
-    .video .content-item-special{
-        margin-left:3vh;
-        position: relative;
-    }
-    .content-item-special-image{
-        margin-top:3vh;
-    }
-    .content-item-special-image img{
-        max-width:100%;
-    }
-    .content-item-special-description{
-        font-weight:bold;
-        font-size:var(--font-size1);
-    }
-
-    .whitepapers>.content-container>.content-item{
-        padding:0vw 2vh;
-    }
-
-    /* addsection */
-    .addisplay{
-        width:100%;
-        background-color:var(--lightbluebg);
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        position:absolute;
-        right:0;
-        left:0;
-        padding:5%;
-        top:90%;
-        bottom:2%;
-    }
-    .addisplay img{
-        max-width:100%;
-    }
-    /* addsection */
-
-    /* content-section */
-    
-    /*footer*/
-    .footer{
-        width:100%;
-        background-color:white;
-    }
-    .credits{
-        width:75%;
-        float:left;
-        display:flex;
-        justify-content:space-evenly;
-        padding:2% 4% 4% 15%;
-        position:relative;
-    }
-    .credits::after{
-        content:'';
-        display:block;
-        position:absolute;
-        width:0.1vh;
-        height:21vw;
-        opacity:0.4;
-        right:1vw;
-        bottom:6vh;
-        background-color:var(--lighttext);
-    }
-    .credits-item>h3{
-        font-size:var(--font-size2);
-    }
-    .companies-wrapper{
-        width:25%;
-        float:left;
-        margin-top:10vh;
-    }
-    .footer::after{
-        content:'';
-        display:table;
-        clear:both;
-    }
-    .credits-list{
-        list-style-type:none;
-        padding:0;
-        margin:0;
-    }
-    .credits-list-item{
-        line-height:2.7vw;
-        font-weight:bold;
-        font-size:var(--font-size3);
-    }
-    .companies{
-        width:100%;
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        align-items:center;
-        justify-items:center;
-    }
-    .companies>div> img{
-        width:75%;
-    }
-    .trust{
-        grid-column:2/4;
-        justify-self: start;
-        align-self:end;
-    }
-    .dnb{
-        position: relative;
-        align-self:end;
-        top:1vh;
-    }
-    .buss,.norton{
-        justify-self:start;
-    }
-    .mcaf{
-        align-self:center;
-        margin-left:1vw;
-    }
-    .ending{
-        align-self:start;
-        justify-self:start;
-        grid-column:1/4;
-        color:var(--lighttext);
-        font-weight:bold;
-        font-size:var(--font-size1);
-        margin-left:1vw;
-    }
-    /*footer*/
-    
-    /* arranging play icons */
-    .videos .content-item-image>.image-holder,.videos .content-item-special-image>.image-holder{
-        display:grid;
-        grid-template-columns:1fr;
-    }
-    .videos .content-item-image>.image-holder>img,.videos .content-item-special-image>.image-holder>img{
-        grid-column:1/2;
-        grid-row:1/2;
-        justify-self:center;
-        align-self:center;
-    }
-    .videos .content-item-image>.image-holder>img:last-child,.videos .content-item-special-image>.image-holder>img:last-child{
-        max-width:50%;
-    }
-    /* arranging play icons */
-
-    /* video popups */
-
-    .popup-wrapper{
-        position:fixed;
-        top:0;
-        bottom:0;
-        right:0;
-        left:0;
-        background-color:black;
-        opacity:0.9;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        z-index:1000;
-    }
-
-    .popup-video{
-        background-color:white;
-        border-radius:1.5rem;
-    }
-
-    .video-title-bar{
-        border:1px solid black;
-        text-align:center;
-    }
-    .video-title-bar span{
-        text-align:right;
-    }
-    .toggle-videos{
-        border:1px solid black;
-        text-align:center;
-    }
-    .toggle-videos>img:first-child{
-        margin-right:2%;
-        cursor: pointer;
-    }
-    .toggle-videos>img:last-child{
-        margin-left:2%;
-        cursor: pointer;
-    }
+/* top-section */
+.top-section{
+    width:100%;
+    background-color:white;
 }
+#logo{
+    width:75%;
+    margin:auto;
+}
+
+/* FIRST PART OF LOGO */
+.cart-label{
+    float:right;
+    color:var(--bluetext);
+    font-weight:bolder;
+    padding:0.5%;
+    margin-left:0.5%;
+    font-size:var(--font-size1);
+}
+.highlight{
+    background-color:var(--brownbg);
+    font-weight:400;
+}
+/* to overcome overflow condition */
+.cart-div::after{
+    content:'';
+    clear:both;
+    display:table;
+}
+.cart-div-item{
+    text-align:center;
+    padding:0 1.2rem;
+}
+.first::after{
+    content:'';
+    display:inline-block;
+    height:1.7vh;
+    width:0.12vw;
+    position:relative;
+    left:1.8vw;
+    top:0.3vh;
+    background-color:var(--bluetext);
+}
+    /* FIRST PART OF LOGO */
+
+    /* SECOND PART OF LOGO */
+    .logo-div{
+    display:flex;             /* used flex because float property was breaking the layout somehow*/
+    padding:0 2vw 0 2vw;
+    align-items:center;
+}
+.logo-div-item{
+    padding:1vw 0;
+}
+
+/* LOGO DIV ITEM 1 */
+.company-review{
+    font-size:var(--font-size2);
+    color:var(--bluetext);
+    font-weight:bold;
+    letter-spacing:0.2vw;
+    display:flex; /* to center the contents vertically */
+    align-items:center;
+    flex-grow:0.5;
+}
+/* LOGO DIV ITEM 1 */
+
+/* LOGO DIV ITEM 2 */
+.logo-img{
+    flex-grow:0.4;
+    display:flex; /* to center the contents vertically*/
+    justify-content:start;
+    align-items:center;
+}
+.logo-img img{
+    width:95%;
+}
+/* LOGO DIV ITEM 2 */
+
+/* LOGO DIV ITEM 3 */
+.company-contact-wrapper{ /* used a wrapper around grid so that grid layout does not break*/
+    flex-grow:2;
+    display:flex;
+    justify-content:flex-end;
+}
+
+/* grid work */
+.company-contact{
+    display:grid;
+    grid-template-columns:4vw 8vw;
+}
+.contact-item{
+    margin:0;
+}
+.contact-text{
+    font-size:var(--font-small);
+    color:var(--blacktext);
+    font-weight:bold;
+}
+.contact-image{
+    justify-self:end;
+    align-self:end;
+    grid-row:1/3;
+    height:100%;
+    margin-right:0.7vw;
+}
+.phone-no{
+    color:rgb(38,159,215);
+    font-size:var(--font-size3);
+    font-weight:bolder;
+    grid-column:2/3;
+    text-align:center;
+}
+/* grid work */
+
+/* LOGO DIV ITEM 3 */
+
+/* top-section */
+
+/* banner-section */
+.banner-section{
+    width:100%;
+}
+#banner{
+    width:75%;
+    margin:auto;
+    display:grid;  /* set up a grid of 3 rows to maintain the layout */
+    grid-template-columns:1fr;
+}
+/* breadcrumbs  FIRST ROW*/
+.option-list{
+    padding:2vh 1.6vw;
+    margin:0;
+    list-style-type:none;
+    overflow: hidden;
+    background-color:var(--darkbluebg);
+}
+.option-list-item{
+    float:left;
+    color:white;
+    margin-left:1vw;
+    font-weight:bold;
+    font-size:var(--font-small);
+}
+.crumb-img{
+    margin-left:0.5vw;
+}
+/* breadcrumbs */
+
+/*companytitle SECOND ROW*/
+.company-title-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+.tabimg{
+    display:flex;
+    justify-content:center; /* centering image inside divs */
+    align-items:center;
+    grid-column:1/3;
+    grid-row:1/2;
+}
+.tabletsimage{
+    width:100%;
+    height:100%;
+}
+.containstitle{
+    grid-column:1/2;
+    grid-row:1/2;
+    align-self:center;
+}
+.pharmaimage{
+    margin-left:4vw;
+    width:50%;
+}
+.searchbox{
+    display:flex;
+    flex-direction:column; /* reversing flex direction */
+    grid-column:2/3;
+    grid-row:1/2;
+    align-self:center;
+    padding:2vh;
+}
+.mainsearch{
+    display:flex;
+    margin-top:2.2vh;
+}
+.mainsearch input{
+    padding:0vh 2vh;
+    width:75%;
+    border:1px solid var(--blacktext);
+    color:var(--blacktext);
+    border-radius:0.3rem;
+    margin-right:0.5vw;
+    font-size:var(--font-small);
+}
+.searchbox p{
+    color:white;
+    font-size:var(--font-size1);
+    font-weight:bolder;
+}
+/*companytitle*/
+.slider-wrapper{
+    position: relative;
+}
+.slider img{
+    width:100%;
+    height:100%;
+}
+.slider-img-desc{
+    background-color:rgb(51,76,36);
+    color:white;
+    position: absolute;
+    right:0;
+    left:0;
+    bottom:0;
+    opacity:0.9;
+    width:100%;
+}
+.description{
+    float:left;
+}
+.slide-nav{
+    float:right;
+    position:absolute;
+    right:2vw;
+    top:4vh;
+}
+.slider-img-desc{
+    content:'';
+    display:table;
+    content:both;
+}
+.slider-img-desc>.description>p,.slider-img-desc>.description>h4{
+    margin-left:1.5vw;
+    margin-bottom:1.5vh;
+}
+#slider-p2{
+    font-size:var(--font-size1);
+}
+.slide-nav>.circle{
+    background-color:black;
+    opacity:0.7;
+    border-radius:50%;
+    height:2.2vh;
+    width:1.2vw;
+    margin:0 0.7vw;
+    display:inline-block;
+    cursor:pointer;
+}   
+.slide-nav>.circle:hover{
+    background-color:white;
+    opacity:0.7;
+} 
+/* banner-section */
+
+/* content-section */
+
+/* to make my content section responsive I divided it into 2 parts section-1 and section-2
+    in the ratio 1:3. Section-1 contains categories and and ad. Section 2 contains profiles,
+    articles and more-content section which consists of whitepapers and videos */
+
+.content-section{
+    width:100%;
+}
+#allcontent{
+    width:75%;
+    margin:auto;
+    padding:2%;
+    background-color:white;
+}
+.maincontent1{
+    width:25%;
+    float:left;
+    padding-right:3%;
+}
+.maincontent2{
+    width:75%;
+    float:left;
+}
+#allcontent::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+/* general description of every main content part */
+.maincon-item{
+    background-color:var(--lightbrownbg);
+}
+.morecontent{
+    background-color:white;
+}
+/* general description of every main content part */
+
+/* arrangement for main-content items */
+.articles,.company-profiles,.leftad,.categories,.morecontent{
+    width:100%;
+}
+.articles,.company-profiles,.morecontent{
+    margin-bottom:3.5%;
+}
+/* more-content is a grid */
+.morecontent{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-column-gap:2vw;
+}
+.company-profiles .content-container{
+    position:relative;
+}
+.whitepapers .content-item,.videos .content-item{
+    position: relative;
+}
+.whitepapers .content-heading,.videos .content-heading{
+    padding-left:7.5%;
+}
+.profile-add-item{
+    grid-row:2/4;
+    grid-column:1/2;
+    position: relative;
+    z-index:200;
+}
+.company-profiles .content-container .last-row{
+    grid-row:3/4;
+    grid-column:1/2;
+}
+.company-profiles .content-container .second-last-row{
+    grid-row:2/3;
+    grid-column:1/2;
+}
+    /* arrangement for maincontent items */
+
+    /*main-content-1*/
+.categories{
+    padding:7%;
+    padding-top:9%;
+    padding-bottom:70%;
+}
+.categories h4{
+    color:var(--bluetext);
+    margin-top:0;
+    position:relative;
+    font-size:1.4vw;
+}
+.category-list{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    background-color:var(--lightbrownbg);
+}
+.category-li{
+    font-weight:bolder;
+    line-height:4.5vh;
+    font-size:var(--font-size1);
+}
+
+.leftad{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:1.3rem;
+    background-color:white;
+}
+.leftad>img{
+    max-width:100%;
+}
+/*main-content-1*/
+
+
+/* all horizontal lines */
+.content-heading::after,.content-row::after,.whitepapers .content-item::after,.videos .content-item::after,.categories h4::after,.content-item-special::after{
+    content:'';
+    display:block;
+    position:absolute;
+    height:0.01rem;
+    left:1.5vw;
+    right:4vw;
+    top:3.8vw;
+    background-color:var(--lighttext);
+    opacity:0.5;
+}
+.content-item-special::after,.videos .content-item::after{
+    top:100%;
+    right:13%;
+    left:0%;
+}
+.videos .content-item::after{
+    top:100%;
+    right:11%;
+    left:6%;
+}
+.whitepapers .content-item::after{
+    top:100%;
+}
+.content-container > .last-row::after{
+    display:none;
+}
+.categories h4::after{
+    right:0;
+    left:0;
+    top:145%
+}
+.content-row::after{
+    top:100%;
+}
+/* all horizontal lines */
+
+
+/* above every content-container*/
+.content-heading{
+    color:var(--bluetext);
+    font-weight:bolder;
+    overflow:hidden;
+    padding:0 3% 0 3%;
+    position: relative;
+}
+.content-heading p{
+    float:left;
+    font-size:1.4vw;
+}
+.content-heading span{
+    float:right;
+    font-size:1vw;
+    position:absolute;
+    right:5vw;
+    top:2.4vw;
+}
+.content-heading img{
+    position:absolute;
+    right:4vw;
+    top:2.8vw;
+    height:15%;
+}
+
+/* above every content-container*/
+
+/* content-container*/
+.content-container{
+    display:grid;
+    grid-template-columns:1fr;
+}
+
+/* content-container rows */
+.content-row{
+    display:flex;
+    position: relative;
+}
+/* content-container rows */
+
+/* grid of content items inside container*/
+.content-item{
+    display:grid;
+    grid-template-columns:1fr 3fr;
+    flex-grow:1;
+}
+.content-item-image{
+    justify-self:center;
+    grid-row:1/3;
+    align-self:center;
+}
+.content-item-image img{
+    max-width:100%;
+}
+.content-item-heading h4{
+    margin-bottom:0.3vh;
+    font-size:var(--font-size3);
+    padding-left:3%;
+}
+.content-item-description{
+    grid-column:2/3;
+}
+.content-item-description p{
+    font-size:var(--font-size1);
+    margin-top:0.3vh;
+    font-weight:bold;
+    padding-left:3%;
+}
+.content-item-description p > span{
+    color:var(--bluetext);
+    font-size:bolder;
+    margin-right:0.3vh;
+}
+.content-item-description p> img{
+    height:0.7vw;
+    margin-left:0.3vw;
+}
+/* grid of content items inside container*/
+
+/* content-container*/
+
+.profile-add-item{
+    display:flex;
+    background-color:var(--lightbluebg);
+    justify-content:center;
+    align-items:center;
+    width:50%;
+    justify-self:end;
+}
+
+.profile-add-item img{
+    width:50%;
+}
+
+.article-heading{
+    display:inline-block;
+}
+
+.article-heading::after{
+    content:" ";
+    display:inline-block;
+    height:var(--font-size2);
+    width:0.1vw;
+    position: relative;
+    top:0.2rem;
+    background-color:var(--lighttext);
+}
+.article-heading + span{
+    color:var(--lighttext);
+    font-size:var(--font-size1);
+    font-weight:bold;
+}
+.video .content-item-image{
+    margin-left:3vh;
+}
+.video .content-item-description,.video .content-item-heading{
+    margin-left:0.9vw;
+}
+.video .content-item-special{
+    margin-left:3vh;
+    position: relative;
+}
+.content-item-special-image{
+    margin-top:3vh;
+}
+.content-item-special-image img{
+    max-width:100%;
+}
+.content-item-special-description{
+    font-weight:bold;
+    font-size:var(--font-size1);
+}
+
+.whitepapers>.content-container>.content-item{
+    padding:0vw 2vh;
+}
+
+/* addsection */
+.addisplay{
+    width:100%;
+    background-color:var(--lightbluebg);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:4%;
+}
+.addisplay img{
+    max-width:100%;
+}
+/* addsection */
+
+/* content-section */
+
+/*footer*/
+.footer{
+    width:100%;
+    background-color:white;
+}
+.credits{
+    width:75%;
+    float:left;
+    display:flex;
+    justify-content:space-evenly;
+    padding:2% 4% 4% 15%;
+    position:relative;
+}
+.credits::after{
+    content:'';
+    display:block;
+    position:absolute;
+    width:0.1vh;
+    height:21vw;
+    opacity:0.4;
+    right:1vw;
+    bottom:6vh;
+    background-color:var(--lighttext);
+}
+.credits-item>h3{
+    font-size:var(--font-size2);
+}
+.companies-wrapper{
+    width:25%;
+    float:left;
+    margin-top:10vh;
+}
+.footer::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+.credits-list{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+.credits-list-item{
+    line-height:2.7vw;
+    font-weight:bold;
+    font-size:var(--font-size3);
+}
+.companies{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    justify-items:center;
+}
+.companies>div> img{
+    width:75%;
+}
+.trust{
+    grid-column:2/4;
+    justify-self: start;
+    align-self:end;
+}
+.dnb{
+    position: relative;
+    align-self:end;
+    top:1vh;
+}
+.buss,.norton{
+    justify-self:start;
+}
+.mcaf{
+    align-self:center;
+    margin-left:1vw;
+}
+.ending{
+    align-self:start;
+    justify-self:start;
+    grid-column:1/4;
+    color:var(--lighttext);
+    font-weight:bold;
+    font-size:var(--font-size1);
+    margin-left:1vw;
+}
+/*footer*/
+
+/* arranging play icons */
+.videos .content-item-image>.image-holder,.videos .content-item-special-image>.image-holder{
+    display:grid;
+    grid-template-columns:1fr;
+}
+.videos .content-item-image>.image-holder>img,.videos .content-item-special-image>.image-holder>img{
+    grid-column:1/2;
+    grid-row:1/2;
+    justify-self:center;
+    align-self:center;
+    cursor: pointer;
+}
+.videos .content-item-image>.image-holder>img:last-child,.videos .content-item-special-image>.image-holder>img:last-child{
+    max-width:50%;
+}
+/* arranging play icons */
+
+/* video popups */
+
+.popup-wrapper{
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color:black;
+    opacity:1;
+    z-index:1000;
+    display:none;
+}
+
+.popup-video{
+    position:relative;
+    background-color:white;
+    border-radius:1.5rem;
+    width:50%;
+    margin-left:25%;
+}
+.video-title-bar>img{
+    position:absolute;
+    right:1vw;
+    top:1vw;
+}
+.video-title-bar{
+    border:1px solid black;
+    text-align:center;
+    position:relative;
+}
+.video-title-bar span{
+    text-align:right;
+}
+.toggle-videos{
+    border:1px solid black;
+    text-align:center;
+    padding:1%;
+}
+.toggle-videos>img:first-child{
+    margin-right:2%;
+    cursor: pointer;
+}
+.toggle-videos>img:last-child{
+    margin-left:2%;
+    cursor: pointer;
+}
+.cross{
+    cursor: pointer;
+}
+
